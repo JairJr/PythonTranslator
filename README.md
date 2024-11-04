@@ -22,5 +22,8 @@
 [System.Environment]::SetEnvironmentVariable('AZURE_REGION', '{sua_regiao}', [System.EnvironmentVariableTarget]::User)
 ```
 
+![ezgif-6-49595dfe30](https://github.com/user-attachments/assets/7c4382a3-3d31-4fd5-a088-67b0a3485e37)
+
+
 ## Referências 
 [Documentação do tradutor de IA do Azure](https://learn.microsoft.com/pt-br/azure/ai-services/translator/?WT.mc_id=Portal-Microsoft_Azure_ProjectOxford)
