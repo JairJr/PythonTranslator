@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor de Artigos</title>
+    
+    <!-- Link do CSS do Materialize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS para ajustes adicionais -->
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .input-field input[type="text"] {
+            font-size: 1.2em;
+        }
+        .translation-result {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho principal -->
+    <nav class="blue darken-3">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Tradutor de Artigos</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="container">
+            <h5>Insira a URL do artigo para tradução:</h5>
+            <form action="/translate" method="post">
+                <div class="input-field">
+                    <label for="url">URL do artigo</label>
+                    <input type="text" id="url" name="url" class="validate" required>
+                </div>
+                <button type="submit" class="btn-large waves-effect waves-light blue darken-3">Traduzir</button>
+            </form>
+
+            {% if translation %}
+            <div class="translation-result">
+                <h6>Resultado da Tradução:</h6>
+                <p class="card-panel grey lighten-4">{{ translation }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Importando JavaScript do Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
